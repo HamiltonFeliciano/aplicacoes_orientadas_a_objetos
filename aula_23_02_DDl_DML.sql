@@ -7,10 +7,10 @@ USE rh;
 
 -- CRIA A TABELA NA BASE DE DADOS
 CREATE TABLE Funcionarios(
-	matricula int,
-    nome varchar(30),
-    salario float,
-    sexo char(1)
+	matricula INT PRIMARY KEY,
+    nome VARCHAR(30),
+    salario FLOAT,
+    sexo CHAR(1)
 );
 
 ALTER TABLE funcionarios ADD rg VARCHAR(20);
@@ -24,7 +24,7 @@ DROP TABLE funcionario;
 -- DML (Data Manipulate Language)
 -- INSERIR AS INFORMAÇÕES DENTRO DA TABELA
 INSERT INTO Funcionarios(matricula,nome,salario,sexo) VALUES(1000,'Maria Silva',3500,'F');
-INSERT INTO Funcionarios(matricula,nome,salario,sexo) VALUES(1001,'Robson Castro',4500,'M');
+INSERT INTO Funcionarios(matricula,nome,salario,sexo) VALUES(1000,'Robson Castro',4500,'M');
 INSERT INTO Funcionarios(matricula,nome,salario,sexo) VALUES(1002,'Vicente Silva',5000,'M');
 INSERT INTO Funcionarios(matricula,nome,salario,sexo) VALUES(1003,'Maria Souza',5589.10,'F');
 INSERT INTO Funcionarios(matricula,nome,salario,sexo) VALUES(1004,'Tania Torres',8000.49,'F');
@@ -37,7 +37,7 @@ INSERT INTO Funcionarios(matricula,nome,salario,sexo) VALUES(1010,'Humberto Silv
 
 
 -- MOSTRAR AS INFORMAÇÕES DENTRO DA TABELA
-SELECT * FROM Funcionario;
+SELECT * FROM Funcionarios;
 SELECT matricula,nome FROM Funcionarios;
 SELECT * FROM Funcionarios WHERE salario > 5000;
 SELECT * FROM Funcionarios WHERE sexo='M';
